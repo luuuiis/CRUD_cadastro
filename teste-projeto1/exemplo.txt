@@ -1,0 +1,13 @@
+-- Projeto --
+
+Modelo:
+    Produto: id, nome, quantidade, valor, observacao
+
+Repositório:
+    obterTodos, obterPorID, adicionar, deletar, atualizar
+
+Serviços de protudo:
+    obterTodos, obterPorID, adicionar, deletar, atualizar
+
+Controller de produto
+    obterTodos, obterPorID, adicionar, deletar, atualizar
