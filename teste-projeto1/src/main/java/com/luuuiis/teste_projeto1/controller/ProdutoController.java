@@ -3,6 +3,7 @@ package com.luuuiis.teste_projeto1.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,11 @@ public class ProdutoController {
     @GetMapping // ex: "/adicionar" -> localhost:8080/produtos/adicionar
     public List<Produto> obterTodos(){
         return produtoService.obterTodos();
+    }
+
+    @GetMapping("/{id}") // ex: "/1" -> localhost:8080/produtos/1
+    public Optional<Produto> obterPorID(@PathVariable Integer id){
+        return produtoService.obterPorID(id);
     }
 
     // @RequestBody -> o spring vai pegar o corpo da requisição e transformar em um objeto do tipo Produto

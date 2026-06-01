@@ -50,7 +50,7 @@ public class ProdutoService {
         produtoRepository.deletar(id);
     }
 
-        public Produto atualizar(Integer id, Produto produto){
+    public Produto atualizar(Integer id, Produto produto){
         // Validação no id
         produto.setId(id); //garante que o id do produto seja o mesmo do parametro
         return produtoRepository.atualizar(produto);
